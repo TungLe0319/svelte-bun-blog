@@ -1,0 +1,28 @@
+{
+  "name": "bun-svelte-ssr",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run build && bun run elysia",
+    "build": "bun build.ts && bun run tw ",
+    "serve": "concurrently \"bun --watch index.ts\" \"bun build.ts --watch\" \"bun run tw\"",
+    "init": "bun run tw && bun run init.ts",
+    "update": "bunx taze major -w && bun install",
+    "tw": "bunx tailwindcss -i ./assets/app.css -o ./assets/output.css"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "concurrently": "^8.2.1",
+    "mdsvex": "^0.11.0",
+    "svelte-preprocess": "^5.0.4",
+    "tailwindcss": "^3.3.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "elysia": "^0.7.15",
+    "svelte": "^4.2.1",
+    "typescript": "^5.2.2"
+  }
+}
