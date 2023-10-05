@@ -14,7 +14,7 @@
     <h1 class="">home page</h1>
 
     <div class="card">
-dogs belong here      
+
       <Counter />
     </div>
     <p class="read-the-docs">
